@@ -39,20 +39,20 @@ I acquired both of my datasets from Kaggle from the links below:
 
 ## Sample Code And Findings:
 
-### Here I created a function using Python and SQL Alchemy to scan my MySQL database (db) called 'youtube_spotify_2018_db2'. If it existed, it would ask you if you wanted to drop the db, or no action would be taken. If you said 'y', then it would drop the database and ask you if you want to recreate a db with the same name. This was to ensure that I was starting with fresh data everytime I reran the code, as I was testing it throughout my project. In a realistic setting, I would tailor it for the end-user's preferred use case.
+* Here I created a function using Python and SQL Alchemy to scan my MySQL database (db) called 'youtube_spotify_2018_db2'. If it existed, it would ask you if you wanted to drop the db, or no action would be taken. If you said 'y', then it would drop the database and ask you if you want to recreate a db with the same name. This was to ensure that I was starting with fresh data everytime I reran the code, as I was testing it throughout my project. In a realistic setting, I would tailor it for the end-user's preferred use case.
 
 ![function](./images/function.png)
 
-### Below, I wanted to emphasize this nested loop I created because it after I created an "Artist" column, this loop enabled me to join the YouTube Top Trending Videos with Spotify's Top 100 Songs of 2018. I accomplished this by targeting the artist names, made them both uniform by removing all spaces, and making them lowercase, and had the loop fill in the "artist" column, if there was a match between the two tables. This Big O notation for time complexity would be an (n*m) function, as it was a nested loop that Ihad to go thru two seperate arrays. This was substantiated by the signifcant more amount of time I had to wait for this to run.
+* Below, I wanted to emphasize this nested loop I created because it after I created an "Artist" column, this loop enabled me to join the YouTube Top Trending Videos with Spotify's Top 100 Songs of 2018. I accomplished this by targeting the artist names, made them both uniform by removing all spaces, and making them lowercase, and had the loop fill in the "artist" column, if there was a match between the two tables. This Big O notation for time complexity would be an (n*m) function, as it was a nested loop that Ihad to go thru two seperate arrays. This was substantiated by the signifcant more amount of time I had to wait for this to run.
 
 ![loop](./images/nested_loop.png)
 
-### Here are the results we can see all of the artists that were listed on Spotify's Top 100 Songs for 2018, and the respective number of top trending videos they had in 2018.
+* Here are the results we can see all of the artists that were listed on Spotify's Top 100 Songs for 2018, and the respective number of top trending videos they had in 2018.
 
 ![results](./images/results.png)
 
 
-### Thank you for taking your time to view my work!
+### Hope you enjoyed it. Thank you for your time!
 
 ## Author
 
