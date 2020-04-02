@@ -47,10 +47,13 @@ I acquired both of my datasets from Kaggle from the links below:
 
 ![loop](./images/nested_loop.png)
 
-* Here are the results we can see all of the artists that were listed on Spotify's Top 100 Songs for 2018, and the respective number of top trending videos they had in 2018.
+* Here are the results we can see all of the artists that were listed on Spotify's Top 100 Songs for 2018, and the respective number of top trending videos they had in 2018. A consideration to keep in mind when viewing the results is because they are music artists, most if not all videos they upload on their channel for viewing is categorized as "Music" (e.g. music videos, promotion, features, video logs, message to fans, and etc).
 
 ![results](./images/results.png)
 
+## Next Steps Considerations:
+* Can go deeper on analysis, if time permits
+* Create nice charts and data visualizations
 
 ### Hope you enjoyed it. Thank you for your time!
 
