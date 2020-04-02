@@ -9,7 +9,7 @@
 * For this project, I wanted to further develop my ETL skills, so that was where my main focus was. I extracted, transformed, and loaded up both Spotify's 2018 Top 100 Songs and YouTube's 2018 Top Trending Videos (videos categorized as music only), and created an "Artist" column to enable joining with Spotify's Top 100 Songs of 2018. The YoutTube data came in two parts, a csv and json format, and the Spotify data was also in a csv format. All three (YouTube statistical and core information, categories, and Spotify's Top 100 Songs) parts were loaded into MySQL as three seperate tables where I later joined all of them to come to my results.
 
 ## PURPOSE:
-* Music is one of my loves in life, next to my family, close friends, and food. I listen to everything ranging from Hip Hop / Rap, RNB, Electronic Dance Music, Pop, Classics, 70's, 80's, 90's music. I thought it would be really fun and a great experience for me for me to work with data that I am very familiar with.
+* Music is one of my loves in life, next to my family, close friends, and food. I listen to everything ranging from Hip Hop / Rap, RNB, Electronic Dance Music, Pop, Classics, 70's, 80's, 90's music. I thought it would be really fun and a great experience to work with data that I am very familiar with.
 
 ## System Prerequisites
 You will need the following installed on your computer system, if you want to replicate my analysis:
@@ -39,11 +39,11 @@ I acquired both of my datasets from Kaggle from the links below:
 
 ## Sample Code And Findings:
 
-* Here I created a function using Python and SQL Alchemy to scan my MySQL database (db) called 'youtube_spotify_2018_db2'. If it existed, it would ask you if you wanted to drop the db, or no action would be taken. If you said 'y', then it would drop the database and ask you if you want to recreate a db with the same name. This was to ensure that I was starting with fresh data everytime I reran the code, as I was testing it throughout my project. In a realistic setting, I would tailor it for the end-user's preferred use case.
+* Here I created a function using Python and SQL Alchemy to scan my MySQL database (db) for a database called 'youtube_spotify_2018_db2'(this can easily be later changed to an input function where you can input a potential name to identify a database by). If it existed, it would ask you if you wanted to drop the db, or it would inform you no action was taken. If you said 'y', then it would drop the database and ask you if you want to recreate a db with the same name. This was to ensure that I was starting with fresh data everytime I reran the code, as I was testing throughout my project. In a realistic setting, I would tailor it for the end-user's preferred use case.
 
 ![function](./images/function.png)
 
-* Below, I wanted to emphasize this nested loop I created because it after I created an "Artist" column, this loop enabled me to join the YouTube Top Trending Videos with Spotify's Top 100 Songs of 2018. I accomplished this by targeting the artist names, made them both uniform by removing all spaces, and making them lowercase, and had the loop fill in the "artist" column, if there was a match between the two tables. This Big O notation for time complexity would be an (n*m) function, as it was a nested loop that Ihad to go thru two seperate arrays. This was substantiated by the signifcant more amount of time I had to wait for this to run.
+* I wanted to emphasize this nested loop I created below because it was the main key that would unlock treasure chest, where the answer to this project would lie. I created an "Artist" column on the final YouTube Tables joined via Pandas in a dataframe format. I then created this nested loop that would enabled me identify which how many, and which Trending YouTube video belonged to which Spotify Artist. I accomplished this by targeting the artist names (referred to as channel title on YouTube), made them both uniform by removing all spaces, making them lowercase, and had the loop fill in the empty "artist" column if there was a match. This Big O notation for time complexity would be an (n*m) function, as it was a nested loop on two seperate arrays. This was substantiated by the signifcant more amount of time I had to wait for this to run, but it was necessary.
 
 ![loop](./images/nested_loop.png)
 
